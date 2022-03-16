@@ -29,7 +29,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     @IBOutlet weak var statusBarView: UIView!
     @IBOutlet weak var customMenuTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var customNavTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var customNavHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var customNavBar: CustomNavBar!
@@ -49,6 +48,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
        // statusBarHeightConstraint.constant = view.window.keyWi view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 40
         
         statusBarHeightConstraint.constant = UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+        
+        if isDeviceFrameLess() {
+            customMenuTopConstraint.constant = 20
+        } else {
+            customMenuTopConstraint.constant = 0
+        }
     }
     
     

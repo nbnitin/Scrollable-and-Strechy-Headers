@@ -7,6 +7,15 @@
 
 import UIKit
 
+extension UIViewController {
+    func isDeviceFrameLess()->Bool {
+        guard let bottomInset = UIApplication.shared.keyWindow?.safeAreaInsets.bottom else {
+            return false
+        }
+        return bottomInset > 0
+    }
+}
+
 class StrechHeaderViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
@@ -22,7 +31,10 @@ class StrechHeaderViewController: UIViewController,UITableViewDelegate,UITableVi
         strechyHeaderView.backgroundColor = .red
         defaultHeaderFrame = strechyHeaderView.frame
         tableView.tableHeaderView = strechyHeaderView
-
+        
+        
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -77,7 +89,7 @@ class StrechHeaderViewController: UIViewController,UITableViewDelegate,UITableVi
             strechyHeaderView.lblTitle.alpha = 1 - (delta) * 1 / 100;
             header.frame = rect!
         }
-       header.layoutMargins.top = scrollView.contentOffset.y
+        header.layoutMargins.top = scrollView.contentOffset.y
         tableView.tableHeaderView = strechyHeaderView
     }
 }

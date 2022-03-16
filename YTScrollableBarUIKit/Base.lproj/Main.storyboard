@@ -35,7 +35,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="InH-Hq-0a6" customClass="CustomNavBar" customModule="YTScrollableBarUIKit" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="40" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="80"/>
                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="WVN-SZ-9gA"/>
@@ -55,7 +55,7 @@
                             <constraint firstItem="InH-Hq-0a6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="49v-hT-O1W"/>
                             <constraint firstItem="bsU-1a-ude" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CNj-fs-XQg"/>
                             <constraint firstItem="GSO-mi-ggs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Idr-o8-stB"/>
-                            <constraint firstItem="InH-Hq-0a6" firstAttribute="top" secondItem="bsU-1a-ude" secondAttribute="bottom" constant="20" id="YXo-VX-Wv1"/>
+                            <constraint firstItem="InH-Hq-0a6" firstAttribute="top" secondItem="bsU-1a-ude" secondAttribute="bottom" id="YXo-VX-Wv1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bsU-1a-ude" secondAttribute="trailing" id="ZOc-2x-zve"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="InH-Hq-0a6" secondAttribute="trailing" id="l8j-Jz-mUh"/>
                             <constraint firstItem="bsU-1a-ude" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pHW-aZ-7cW"/>
@@ -69,7 +69,6 @@
                         <outlet property="customMenuTopConstraint" destination="YXo-VX-Wv1" id="4sG-Fo-PyW"/>
                         <outlet property="customNavBar" destination="InH-Hq-0a6" id="dZj-KN-JtJ"/>
                         <outlet property="customNavHeightConstraint" destination="WVN-SZ-9gA" id="Fol-Bz-7gE"/>
-                        <outlet property="customNavTopConstraint" destination="YXo-VX-Wv1" id="s6r-Bl-9uH"/>
                         <outlet property="statusBarHeightConstraint" destination="QW6-vu-D1Y" id="3Mh-IN-uBx"/>
                         <outlet property="statusBarView" destination="bsU-1a-ude" id="Fcc-w1-Y8O"/>
                         <outlet property="tableView" destination="GSO-mi-ggs" id="iPw-Tm-jAS"/>
