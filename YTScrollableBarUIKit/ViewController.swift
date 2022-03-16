@@ -104,6 +104,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         if Int(offset.y) <= Int(-customNavHeightConstraint.constant) {
             print("reached at top")
+            customNavBar.frame.origin.y = defaultHeaderFrame.origin.y
             return
         }
 
@@ -117,9 +118,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             }
            // self.bluredImageView.alpha =   1 / kDefaultHeaderFrame.size.height * offset.y * 2;
             customNavBar.clipsToBounds = true
-        }
-        else
-        {
+        } else {
             self.edgesForExtendedLayout = UIRectEdge()
             var delta : CGFloat = 0.0
             var rect = customNavBar.frame
